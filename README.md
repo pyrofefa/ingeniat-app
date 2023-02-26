@@ -1,6 +1,6 @@
-# Aplicacion para ingeniat
+# Aplicación  para ingeniat
 
-_Proyecto de creación de una aplicacion movil. Desarrollada en ionic con angular_ 
+_ProyectProyecto de creación de una aplicación móvil. Desarrollada en ionic con angular_ 
 
 
 ## Componentes 
