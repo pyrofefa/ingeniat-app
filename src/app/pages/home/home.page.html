@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-title>
+        ingeniat
+      </ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-searchbar placeholder="Buscar" animated (ionChange)='searchCars($event)'></ion-searchbar>
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let item of items | filter: search : 'nombreMarca'">
+      <ion-label>{{ item.nombreMarca }} | {{ item.nombreModelo }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
